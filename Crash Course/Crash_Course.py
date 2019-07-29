@@ -149,10 +149,21 @@ def practice3_10():
     print(languages);
     languages.sort(reverse=True);
     print(languages);
+magicians = ['alice', 'david', 'carolina']
+def practice4_1():
+    pizzas = ['pepperoni', 'extra cheese', 'meat lovers'];
+    for pizza in pizzas:
+        print(pizza.title());
+    for pizza in pizzas:
+        print("I could go for a slice of " + pizza + " pizza right now.\n");
+    print("Pizza is the best food ever!")
+def practice4_2():
+    animals = ['dog', 'cat', 'rabbit', 'fox']
+    for animal in animals:
+        print("A " + animal + " would make a great pet.")
+    print("In fact, all of these animals would make great pets!")
 
-practice3_8();
-practice3_9();
-practice3_10();
-
+practice4_1();
+practice4_2();
 
 
