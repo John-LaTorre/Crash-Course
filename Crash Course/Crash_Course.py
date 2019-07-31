@@ -162,8 +162,31 @@ def practice4_2():
     for animal in animals:
         print("A " + animal + " would make a great pet.")
     print("In fact, all of these animals would make great pets!")
+def practice4_3():
+    for value in range (1, 21):
+        print(value);
+def practice4_4():
+    million = list(range(1, 1000001));
+    print(million);
+def practice4_5():
+    million = list(range(1, 1000001));
+    print(min(million));
+    print(max(million));
+    print(sum(million));
+def practice4_6():
+    odd_numbers = list(range(1, 21, 2));
+    print(odd_numbers);
+def practice4_7():
+    triples = list(range(3, 30, 3));
+    print(triples);
+def practice4_8():
+    for value in range(1,11):
+        cube = value**3;
+        print(cube);
+def practice4_9():
+    cubes = [value**3 for value in range(1,11)];
+    print(cubes);
 
-practice4_1();
-practice4_2();
+practice4_9();
 
 
