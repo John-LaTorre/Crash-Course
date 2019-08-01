@@ -186,7 +186,35 @@ def practice4_8():
 def practice4_9():
     cubes = [value**3 for value in range(1,11)];
     print(cubes);
+def practice4_10():
+    animals = ['dog', 'cat', 'rabbit', 'fox', 'horse', 'raccoon', 'beaver', 'badger', 'wolf'];
+    print("The first three items in the list are:");
+    print(animals[:3]);
+    print("Three items from the middle of the list are:");
+    print(animals[3:6]);
+    print("The last three items in the list are:");
+    print(animals[-3:]);
+def practice4_11():
+     pizzas = ['pepperoni', 'extra cheese', 'meat lovers'];
+     friends_pizzas = pizzas[:];
+     pizzas.append('NY White');
+     friends_pizzas.append('Hawaiian');
+     print("My favorite pizzas are: ")
+     for pizza in pizzas:
+         print(pizza.title());
+     print("\nMy friend's favorite pizzas are: ")
+     for pizza in friends_pizzas:
+         print(pizza.title());
+def practice4_12():
+    my_foods = ['pizza', 'falafel', 'carrot cake']
+    friend_foods = my_foods[:]
+    my_foods.append('cannoli');
+    friend_foods.append('ice cream');
+    print("My favorite foods are: ");
+    for food in my_foods:
+        print(food);
+    print("\nMy friend's favorite foods are: ");
+    for food in friend_foods:
+        print(food);
 
-practice4_9();
-
-
+practice4_12();
