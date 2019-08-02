@@ -216,5 +216,11 @@ def practice4_12():
     print("\nMy friend's favorite foods are: ");
     for food in friend_foods:
         print(food);
+def practice4_13():
+    buffet = ('pizza', 'fried chicken', 'steamed veggies', 'spaghetti', 'chocolate cake');
+    for food in buffet:
+        print(food);
+    buffet = ('pizza', 'grilled chicken', 'steamed veggies', 'lasagna', 'chocolate cake');
+    for food in buffet:
+        print(food);
 
-practice4_12();
