@@ -224,3 +224,19 @@ def practice4_13():
     for food in buffet:
         print(food);
 
+def practice5_1():
+    game = 'Red Dead Redemption 2';
+    print("Is RDR2 the best game ever? I predict True");
+    print(game == 'Red Dead Redemption 2');
+
+    print("Is Fortnite the best game ever? I predict False");
+    print(game == 'Fortnite');
+
+    food = 'Ice cream'
+    print("I don't think ice cream is the best");
+    print(food != 'Ice cream');
+    answer = 42;
+    print("The answer to life the universe and everything is 42");
+    print(answer == 42);
+
+practice5_1();
