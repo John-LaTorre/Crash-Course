@@ -239,4 +239,58 @@ def practice5_1():
     print("The answer to life the universe and everything is 42");
     print(answer == 42);
 
-practice5_1();
+def practice5_3():
+    alien_color = 'green';
+    if alien_color == 'green':
+        print("You have earned 5 points!");
+    if alien_color == 'yellow':
+        print("You earn nothing.");
+ #End this shit
+ #
+ 
+def practice5_4():
+    color = 'green';
+    if color == 'green':
+        print("You got 5 points.");
+    else: 
+        print("You got 10 points.");
+
+def practice5_5():
+    color = 'yellow';
+    if color == 'green':
+        print("You got 5 points.");
+    elif color == 'yellow': 
+        print("You got 10 points.");
+    else:
+        print("You got 15 points");
+
+def practice5_6():
+    age = 16;
+    if age <= 2:
+        print("You are a baby");
+    elif age < 4:
+        print("You are a toddler");
+    elif age < 13:
+        print("You are a kid");
+    elif age < 20:
+        print("You are a teenager");
+    elif age < 65:
+        print("You are an adult");
+    else:
+        print("You are an elder");
+
+def practice5_7():
+    fruits = ['strawberries', 'raspberries', 'grapes'];
+    if 'bananas' in fruits:
+        print("You really like bananas!");
+    if 'grapes' in fruits:
+        print("You really like grapes!");
+    if 'blueberries' in fruits:
+        print("You really like blueberries.");
+    if 'strawberries' in fruits:
+        print("You really love strawberries!");
+    if 'oranges' in fruits:
+        print("You really like oranges!");
+
+
+
