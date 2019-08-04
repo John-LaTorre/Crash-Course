@@ -292,5 +292,48 @@ def practice5_7():
     if 'oranges' in fruits:
         print("You really like oranges!");
 
+def practice5_8():
+    usernames = ['elite_haxor420', 'susan095678', 'BigBillyBass1956', 'admin', 'jimmysmith123'];
+    for user in usernames:
+        if user == 'admin':
+            print("Hello " + user + ", would you like to see a status report?");
+        else:
+            print("Hello " + user + ", thank you for logging in again.");
+
+def practice5_9():
+    usernames = [];
+    if usernames:
+        for user in usernames:
+            if user == 'admin':
+                print("Hello " + user + ", would you like to see a status report?");
+            else:
+                print("Hello " + user + ", thank you for logging in again.");
+    else:
+        print("We need to find some users!");
+
+def practice5_10():
+    current_users = ['elite_haxor420', 'susan095678', 'BigBillyBass1956', 'admin', 'jimmysmith123'];
+    new_users = ['SUSAN095678', 'Jimmysmith123', 'xxx_ArCaDiA317_xxx', 'BigSloppyTetons69', 'frankburman1975'];
+
+    for user in new_users:
+        if user.lower() in current_users:
+            print("That name is taken. Please choose a different user name.");
+        else:
+            print("That name is available. Welcome aboard " + user + ".");
 
 
+def practice5_11():
+    numbers = list(range(1, 10));
+    for number in numbers:
+        if number == 1:
+            print(str(number) + "st");
+        elif number == 2:
+            print(str(number) + "nd");
+        elif number == 3:
+            print(str(number) + "rd");
+        else:
+            print(str(number) + "th");
+
+practice5_11();
+
+    
