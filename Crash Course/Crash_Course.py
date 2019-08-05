@@ -245,8 +245,6 @@ def practice5_3():
         print("You have earned 5 points!");
     if alien_color == 'yellow':
         print("You earn nothing.");
- #End this shit
- #
  
 def practice5_4():
     color = 'green';
@@ -321,7 +319,6 @@ def practice5_10():
         else:
             print("That name is available. Welcome aboard " + user + ".");
 
-
 def practice5_11():
     numbers = list(range(1, 10));
     for number in numbers:
@@ -334,6 +331,38 @@ def practice5_11():
         else:
             print(str(number) + "th");
 
-practice5_11();
+def practice6_1():
+    governor = {'first': 'Roy', 'last': 'Cooper', 'age': 62, 'residence': 'Raleigh'};
+    print("The Governor of North Carolina is " + governor['first'] + " " + governor['last'] + ". He is "
+          + str(governor['age']) + " years old and lives in " + governor['residence'] + ".");
+ 
+def practice6_2():
+    favorite_numbers = {
+        'John': 42,
+        'Shannon': 20,
+        'Ben': 420,
+        'Leslie': 51,
+        'Jeff': 2,
+        }
+    print(favorite_numbers);
+
+def practice6_3():
+    python_gloss = {
+        'list': "Basically the python version of an array.",
+        'dictionary': "Like an array but functions similar to a hash table.",
+        'elif': "Stands for else-if, otherwise identical to Java.",
+        'loop': "Instead of using an increment variable, Python skips that and says it in plain English -> for x in y.",
+        'slice': "Python lets you take pieces of an array/list and work with them separately with this command.",
+        }
+    print("List: " + python_gloss['list']);
+    print("Dictionary: " + python_gloss['dictionary']);
+    print("Elif: " + python_gloss['elif']);
+    print("Loop: " + python_gloss['loop']);
+    print("Slice: " + python_gloss['slice']);
+
+practice6_1();
+practice6_2();
+practice6_3();
+
 
     
