@@ -360,9 +360,45 @@ def practice6_3():
     print("Loop: " + python_gloss['loop']);
     print("Slice: " + python_gloss['slice']);
 
-practice6_1();
-practice6_2();
-practice6_3();
+def practice6_4():
+    python_gloss = {
+        'list': "Basically the python version of an array.",
+        'dictionary': "Like an array but functions similar to a hash table.",
+        'elif': "Stands for else-if, otherwise identical to Java.",
+        'loop': "Instead of using an increment variable, Python skips that and says it in plain English -> for x in y.",
+        'slice': "Python lets you take pieces of an array/list and work with them separately with this command.",
+        }
+    for word, definition in python_gloss.items():
+        print(word.title() + ": " + definition);
+def practice6_5():
+    rivers = {
+        'nile': 'egypt',
+        'amazon': 'brazil',
+        'yellow': 'china'
+        }
+    for river, country in rivers.items():
+        print("The " + river.title() + " River runs through " + country.title() + ".");
+    for river in rivers.keys():
+        print(river.title());
+    for country in rivers.values():
+        print(country.title());
+def practice6_6():
+    favorite_numbers = {
+        'John': 42,
+        'Shannon': 20,
+        'Ben': 420,
+        'Leslie': 51,
+        'Jeff': 2,
+        }
+    poll_takers = ['Ben', 'John', 'Shannon', 'Leslie', 'Jeff', 'Susanne', 'Marissa', 'Aymeric'];
+    poll_takers.sort();
+    for name in poll_takers:
+        if name in favorite_numbers.keys():
+            print("Thanks for taking the poll, " + name.title() + "!");
+        else:
+            print("Hey, " + name.title() + "!" + " Please take the poll!");
 
 
-    
+practice6_4();
+practice6_5();
+practice6_6();
