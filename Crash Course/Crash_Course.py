@@ -399,6 +399,49 @@ def practice6_6():
             print("Hey, " + name.title() + "!" + " Please take the poll!");
 
 
-practice6_4();
-practice6_5();
-practice6_6();
+def practice6_a():
+    favorite_languages = {
+        'jen': ['python', 'ruby'],
+        'sarah': ['c'],
+        'edward': ['ruby', 'go'],
+        'phil': ['python', 'haskell'],
+        }
+    for name, languages in favorite_languages.items():
+        print("\n" + name.title() + "'s favorite languages are:");
+        for language in languages:
+            print("\t" + language.title());
+
+def practice6_b():
+    users = {
+        'aeinstein': {
+            'first': 'albert',
+            'last': 'einstein',
+            'location': 'princeton',
+            },
+        'mcurie': {
+            'first': 'marie',
+            'last': 'curie',
+            'location': 'paris',
+            }
+        }
+    for username, user_info in users.items():
+        print("\nUsername: " + username);
+        full_name = user_info['first'] + " " + user_info['last'];
+        location = user_info['location'];
+
+        print("\tFull name: " + full_name.title());
+        print("\tLocation: " + location.title());
+
+def practice6_7():
+    governor = {'first': 'Roy', 'last': 'Cooper', 'age': 62, 'residence': 'Raleigh'};
+    senator = {'first': 'Thom', 'last': 'Tillis', 'age': 58, 'residence': 'Washington D.C'};
+    president = {'first': 'Barack', 'last': 'Obama', 'age': 58, 'residence': 'Our Hearts'};
+
+    politicians = [governor, senator, president];
+    for politician in politicians:
+        full_name = politician['first'] + " " + politician['last'];
+        print("Name: " + full_name.title());
+        print("Age: " + str(politician['age']));
+        print("Residence: " + politician['residence'] + "\n");
+
+practice6_7();
