@@ -444,4 +444,54 @@ def practice6_7():
         print("Age: " + str(politician['age']));
         print("Residence: " + politician['residence'] + "\n");
 
-practice6_7();
+def practice6_8():
+    fluffy = {'owner': 'sarah', 'animal': 'bunny', 'name': 'fluffy'};
+    tim = {'owner': 'frank', 'animal': 'cat', 'name': 'tim'};
+    sir_barkington = {'owner': 'john', 'animal': 'dog', 'name': 'sir barkington'};
+
+    pets = [fluffy, tim, sir_barkington];
+    print("Pet Registry");
+    for pet in pets:
+        print("\nName: " + pet['name'].title());
+        print("\tType: " + pet['animal'].title());
+        print("\tOwner: " + pet['owner'].title());
+
+def practice6_9():
+    favorite_places = {
+        'john': ['tokyo', 'raleigh', 'italy'],
+        'shannon': ['wilmington', 'berlin', 'apex'],
+        'leslie': ['atlanta', 'jamaica', 'wilmington'],
+        }
+    for person, places in favorite_places.items():
+        print(person.title() + "'s favorite places:");
+        for place in places:
+            print('\t' + place.title());
+
+def practice6_10():
+    favorite_numbers = {
+        'John': [42, 23, 90, 14],
+        'Shannon': [20, 34, 75, 12],
+        'Ben': [420, 4, 20, 24],
+        'Leslie': [51, 65, 87, 25],
+        'Jeff': [2, 6, 1, 9],
+        }
+    for person, numbers in favorite_numbers.items():
+        print(person.title() + "'s favorite numbers:");
+        for number in numbers:
+            print('\t' + str(number));
+def practice6_11():
+    cities = {
+        'tokyo': {'country': 'japan', 'population': 12000000, 'fact': 'the best city in the world.'},
+        'raleigh': {'country': 'america', 'population': 350000, 'fact': 'the state capital of NC.'},
+        'saigon': {'country': 'vietnam', 'population': 8400000, 'fact': 'officially named Ho Chi Min but no one calls it that.'}
+        }
+    print("John's Travel Notebook");
+    for city, information in cities.items():
+        where = information['country'];
+        pop = information['population'];
+        factoid = information['fact'];
+        print(city.title() + " is a city in " + where.title() + " with a general population of " + str(pop));
+        print("It is a fact that " + city.title() + " is " + factoid + "\n");
+
+message = input("Tell me something, and I will repeat it back to you: ");
+print(message);
