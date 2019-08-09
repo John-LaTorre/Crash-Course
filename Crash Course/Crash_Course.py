@@ -532,6 +532,60 @@ def practice7_3():
     else:
         print(str(number) + " is not a multiple of ten.");
 
-practice7_1();
-practice7_2();
-practice7_3();
+def practice7_c():
+    prompt = "\nTell me something and I'll repeat it back to you: ";
+    prompt += "\nEnter 'quit' to end the program. ";
+
+    message = " ";
+    active = True;
+
+    while active:
+        message = input(prompt);
+
+        if message == 'quit':
+            active = False;
+        else:
+            print(message);
+def practice7_d():
+    prompt = "\nPlease enter the name of a city that you have visited: ";
+    prompt += "\n(Enter 'quit' when you are finished.) ";
+
+    while True:
+        city = input(prompt);
+
+        if city == 'quit':
+            break;
+        else:
+            print("I'd love to go to " + city.title() + "!");
+
+def practice7_4():
+    prompt = "Enter the pizza toppings you want: ";
+    prompt += "\n(Enter 'quit' to finish) ";
+
+    topping = " ";
+
+    while topping != 'quit':
+        topping = input(prompt);
+        if topping != 'quit':
+            print("We'll add " + topping + " to your pizza.");
+def practice7_5():
+    prompt1 = "How many tickets do you want? ";
+    party = input(prompt1);
+    party = int(party);
+
+    asks = 1;
+    prompt2 = "How old are you? ";
+
+    while asks <= party:
+        age = input(prompt2);
+        age = int(age);
+        asks += 1;
+
+        if age < 3:
+            print("Your ticket is free.");
+        elif age <= 12:
+            print("Your ticket is $10.");
+        else:
+            print("Your ticket is $15");
+
+practice7_5();
