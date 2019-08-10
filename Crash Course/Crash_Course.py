@@ -26,22 +26,26 @@ def practice2_7():
     print(name2.lstrip());
     print(name2.strip());
  #Prints out some simple math problems
+
 def practice2_8():
     print(5+3);
     print(16/2);
     print(4*2);
     print(10-2);
 #Converts number to string
+
 def practice2_9():
     number = 42;
     message = "The answer to life, the universe, and everything is " + str(number);
     print(message);
+
 def practice3_1():
     names = ['John', 'Tomer', 'Shannon', 'Nicole'];
     print(names[0]);
     print(names[1]);
     print(names[2]);
     print(names[3]);
+
 def practice3_2():
     names = ['John', 'Tomer', 'Shannon', 'Nicole'];
     message1 = names[0] + " is a great guy but lonely.";
@@ -52,16 +56,19 @@ def practice3_2():
     print(message2);
     print(message3);
     print(message4);
+
 def practice3_3():
     videoGames = ['Cyberpunk 2077', 'Red Dead Redemption 2', 'Sekiro'];
     print("I can't wait for " + videoGames[0] + " to come out!");
     print("I am currently playing " + videoGames[1]);
     print("I wish I was good at " + videoGames[2]);
+
 def practice3_4():
     guests = ['President Obama', 'Robin Williams', "Kiera Knightly"]
     print("Hello " + guests[0] + ", I have magically invited you to dinner. Looking forward to seeing you.");
     print("Hello " + guests[1] + ", I have magically invited you to dinner. Looking forward to seeing you.");
     print("Hello " + guests[2] + ", I have magically invited you to dinner. Looking forward to seeing you.");
+
 def practice3_5():
     guests = ['President Obama', 'Robin Williams', "Kiera Knightly"]
     print("Hello " + guests[0] + ", I have magically invited you to dinner. Looking forward to seeing you.");
@@ -73,6 +80,7 @@ def practice3_5():
     print("Hello " + guests[0] + ", I have magically invited you to dinner. Looking forward to seeing you.");
     print("Hello " + guests[1] + ", I have magically invited you to dinner. Looking forward to seeing you.");
     print("Hello " + guests[2] + ", I have magically invited you to dinner. Looking forward to seeing you.");
+
 def practice3_6():
     guests = ['President Obama', 'Robin Williams', "Kiera Knightly"]
     print("Looks like I found a bigger table.");
@@ -85,6 +93,7 @@ def practice3_6():
     print("Hello " + guests[3] + ", I have magically invited you to dinner. Looking forward to seeing you.");
     print("Hello " + guests[4] + ", I have magically invited you to dinner. Looking forward to seeing you.");
     print("Hello " + guests[5] + ", I have magically invited you to dinner. Looking forward to seeing you.");
+
 def practice3_7():
     guests = ['President Obama', 'Robin Williams', "Kiera Knightly"]
     guests.insert(0, "Hillary Clinton");
@@ -100,6 +109,7 @@ def practice3_7():
     del guests[1];
     del guests[0];
     print(guests);
+
 def practice3_8():
     vacation = ['Tokyo', 'Rome', 'Bangkok', 'Saigon', 'Berlin'];
     print("1");
@@ -124,6 +134,7 @@ def practice3_8():
     vacation.sort(reverse=True);
     print("9");
     print(vacation);
+
 def practice3_9():
     guests = ['President Obama', 'Robin Williams', "Kiera Knightly"];
     guests.insert(0, "Hillary Clinton");
@@ -131,6 +142,7 @@ def practice3_9():
     guests.append("Chuck Wendig");
     guestnum = len(guests);
     print("I'm inviting " + str(len(guests)) + " guests to my magic dinner party.");
+
 def practice3_10():
     languages = ['Java', 'C++', 'Python'];
     languages.append('R');
@@ -150,6 +162,7 @@ def practice3_10():
     languages.sort(reverse=True);
     print(languages);
 magicians = ['alice', 'david', 'carolina']
+
 def practice4_1():
     pizzas = ['pepperoni', 'extra cheese', 'meat lovers'];
     for pizza in pizzas:
@@ -157,35 +170,44 @@ def practice4_1():
     for pizza in pizzas:
         print("I could go for a slice of " + pizza + " pizza right now.\n");
     print("Pizza is the best food ever!")
+
 def practice4_2():
     animals = ['dog', 'cat', 'rabbit', 'fox']
     for animal in animals:
         print("A " + animal + " would make a great pet.")
     print("In fact, all of these animals would make great pets!")
+
 def practice4_3():
     for value in range (1, 21):
         print(value);
+
 def practice4_4():
     million = list(range(1, 1000001));
     print(million);
+
 def practice4_5():
     million = list(range(1, 1000001));
     print(min(million));
     print(max(million));
     print(sum(million));
+
 def practice4_6():
     odd_numbers = list(range(1, 21, 2));
     print(odd_numbers);
+
 def practice4_7():
     triples = list(range(3, 30, 3));
     print(triples);
+
 def practice4_8():
     for value in range(1,11):
         cube = value**3;
         print(cube);
+
 def practice4_9():
     cubes = [value**3 for value in range(1,11)];
     print(cubes);
+
 def practice4_10():
     animals = ['dog', 'cat', 'rabbit', 'fox', 'horse', 'raccoon', 'beaver', 'badger', 'wolf'];
     print("The first three items in the list are:");
@@ -194,6 +216,7 @@ def practice4_10():
     print(animals[3:6]);
     print("The last three items in the list are:");
     print(animals[-3:]);
+
 def practice4_11():
      pizzas = ['pepperoni', 'extra cheese', 'meat lovers'];
      friends_pizzas = pizzas[:];
@@ -205,6 +228,7 @@ def practice4_11():
      print("\nMy friend's favorite pizzas are: ")
      for pizza in friends_pizzas:
          print(pizza.title());
+
 def practice4_12():
     my_foods = ['pizza', 'falafel', 'carrot cake']
     friend_foods = my_foods[:]
@@ -216,6 +240,7 @@ def practice4_12():
     print("\nMy friend's favorite foods are: ");
     for food in friend_foods:
         print(food);
+
 def practice4_13():
     buffet = ('pizza', 'fried chicken', 'steamed veggies', 'spaghetti', 'chocolate cake');
     for food in buffet:
@@ -370,6 +395,7 @@ def practice6_4():
         }
     for word, definition in python_gloss.items():
         print(word.title() + ": " + definition);
+
 def practice6_5():
     rivers = {
         'nile': 'egypt',
@@ -382,6 +408,7 @@ def practice6_5():
         print(river.title());
     for country in rivers.values():
         print(country.title());
+
 def practice6_6():
     favorite_numbers = {
         'John': 42,
@@ -397,7 +424,6 @@ def practice6_6():
             print("Thanks for taking the poll, " + name.title() + "!");
         else:
             print("Hey, " + name.title() + "!" + " Please take the poll!");
-
 
 def practice6_a():
     favorite_languages = {
@@ -479,6 +505,7 @@ def practice6_10():
         print(person.title() + "'s favorite numbers:");
         for number in numbers:
             print('\t' + str(number));
+
 def practice6_11():
     cities = {
         'tokyo': {'country': 'japan', 'population': 12000000, 'fact': 'the best city in the world.'},
@@ -501,6 +528,7 @@ def practice7_a():
         print("\nYou're tall enough to ride!");
     else:
         print("\nYou'll be able to ride when you're a little older.");
+
 def practice7_b():
     number = input("Enter a number, and I'll tell you if it's even or odd: ");
     number = int(number);
@@ -546,6 +574,7 @@ def practice7_c():
             active = False;
         else:
             print(message);
+
 def practice7_d():
     prompt = "\nPlease enter the name of a city that you have visited: ";
     prompt += "\n(Enter 'quit' when you are finished.) ";
@@ -568,6 +597,7 @@ def practice7_4():
         topping = input(prompt);
         if topping != 'quit':
             print("We'll add " + topping + " to your pizza.");
+
 def practice7_5():
     prompt1 = "How many tickets do you want? ";
     party = input(prompt1);
@@ -588,4 +618,86 @@ def practice7_5():
         else:
             print("Your ticket is $15");
 
-practice7_5();
+def practice7_e():
+    unconfirmed_users = ['alice', 'brian', 'candace'];
+    confirmed_users = [];
+
+    while unconfirmed_users:
+        current_user = unconfirmed_users.pop();
+        print("Verifying user: " + current_user.title());
+        confirmed_users.append(current_user);
+
+    print("\nThe following users have been confirmed: ");
+    for user in confirmed_users:
+        print(user.title());
+
+def practice7_f():
+    responses = {};
+    # Set flag to indicate polling active
+    polling_active = True;
+
+    while polling_active:
+        #Ask for user's name and response
+        name = input("\nWhat is your name? ");
+        response = input("Which mountain would you like to climb someday? ");
+
+        # Store response in dictionary
+        responses[name] = response;
+
+        # Find out if anyone else wants to take the poll
+        repeat = input("Would you like to let someone else respond? (yes/no) ");
+        if repeat == 'no':
+            polling_active = False;
+    # Polling complete. Show the results
+    print("\n--- Poll Results ---");
+    for name, response in responses.items():
+        print(name + " would like to climb " + response + "."); 
+
+def practice7_8():
+    sandwich_orders = ['blt', 'ham and cheese', 'turkey club', 'grilled cheese'];
+    made_sandwiches = [];
+
+    while sandwich_orders:
+        current_order = sandwich_orders.pop();
+        print("One " + current_order + " sandwich ready. Order up!");
+        made_sandwiches.append(current_order);
+    print("\n--- Sandwiches made ---");
+    for sandwich in made_sandwiches:
+        print(sandwich.upper());
+
+def practice7_9():
+    sandwich_orders = ['pastrami', 'ham and cheese', 'pastrami', 'grilled cheese', 'turkey club', 'pastrami'];
+    made_sandwiches = [];
+
+    print("We apologize but the deli has run out of pastrami.");
+    while 'pastrami' in sandwich_orders:
+        sandwich_orders.remove('pastrami');
+
+    while sandwich_orders:
+        current_order = sandwich_orders.pop();
+        print("One " + current_order + " sandwich ready. Order up!");
+        made_sandwiches.append(current_order);
+    print("\n--- Sandwiches made ---");
+    for sandwich in made_sandwiches:
+        print(sandwich.upper());
+
+def practice7_10():
+    vacations = {};
+
+    poll_active = True;
+
+    while poll_active:
+        name = input("\nWhat is your name? ");
+        location = input("If you could visit one place in the world, where would you go? ");
+
+        vacations[name] = location;
+        repeat = input("Is there someone else waiting to take the poll? (yes/no) ");
+
+        if repeat == 'no':
+            poll_active = False;
+
+    print("\n--- Poll Results ---");
+    for name, location in vacations.items():
+        print(name + " wants to visit " + location.title() + " more than anywhere else in the world.");
+
+practice7_10();
