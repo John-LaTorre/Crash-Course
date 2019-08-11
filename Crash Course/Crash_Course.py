@@ -700,4 +700,27 @@ def practice7_10():
     for name, location in vacations.items():
         print(name + " wants to visit " + location.title() + " more than anywhere else in the world.");
 
-practice7_10();
+def practice8_1():
+    print("This chapter deals with functions which is something I figured out awhile ago.");
+    print("This bit is just to practice the absolute simplest form of a function.")
+
+def practice8_2(title):
+    print("Our first function that takes a parameter!");
+    print("One of my favorite books is " + title.title() + ".");
+
+# practice8_3
+def make_shirt(size, message):
+    print("Ok, we'll make you a " + size + " sized shirt with '" + message + "' printed on it.");
+
+# practice8_4
+# Change previous function to have default values
+def make_shirt(message = 'I love Python', size = 'large'):
+    print("Ok, we'll make you a " + size + " sized shirt with '" + message + "' printed on it.");
+
+#practice8_5
+def cities(city, country = 'The United States'):
+    print(city.title() + " is in " + country.title());
+
+cities('Wilmington');
+cities('raleigh');
+cities('tokyo','japan');
