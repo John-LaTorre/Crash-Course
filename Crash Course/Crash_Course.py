@@ -721,6 +721,77 @@ def make_shirt(message = 'I love Python', size = 'large'):
 def cities(city, country = 'The United States'):
     print(city.title() + " is in " + country.title());
 
-cities('Wilmington');
-cities('raleigh');
-cities('tokyo','japan');
+# practice8_a
+def get_formatted_name(first_name, last_name, middle_name = ''):
+    if middle_name:
+        full_name = first_name + ' ' + middle_name + ' ' + last_name;
+    else:
+        full_name = first_name + ' ' + last_name;
+    return full_name.title();
+
+# practice8_b
+def build_person(first_name, last_name, age = ''):
+    person = {'first': first_name, 'last': last_name};
+    if age:
+        person['age'] = age;
+    return person;
+
+def practice8_c():
+    while True:
+        print("\nPlease tell me your name: ");
+        print("(enter 'q' at any time to quit) ");
+
+        f_name = input("First name: ");
+        if f_name == 'q':
+            break;
+        l_name = input("Last name: ");
+        if l_name == 'q':
+            break;
+
+        formatted_name = get_formatted_name(f_name, l_name);
+        print("\nHello, " + formatted_name + "!");
+
+# practice8_6
+def city_country(city, country):
+    the_city = city.title();
+    the_country = country.title();
+    result = the_city + ", " + the_country;
+    return result;
+
+def practice8_6():
+    print(city_country('tokyo', 'japan'));
+    print(city_country('raleigh', 'north carolina'));
+    print(city_country('bangkok', 'thailand'));
+
+# practice8_7
+def make_album(artist, title, tracks = ''):
+    album = {'band': artist, 'release': title};
+    if tracks:
+        album['songs'] = tracks;
+    return album;
+
+def practice8_7():
+    kpop = make_album('twice', 'what is love?');
+    rap = make_album('childish gambino', 'camp');
+    electro = make_album('sia', 'this is acting');
+    alternative = make_album('nirvana', 'unplugged in new york', 14);
+    print(kpop);
+    print(rap);
+    print(electro);
+    print(alternative);
+
+def practice8_8():
+    while True:
+        print("\nPlease tell me your favorite album: ");
+        print("(enter 'q' at any time to quit) ");
+
+        artist_name = input("Artist name: ");
+        if artist_name == 'q':
+            break;
+        album_name = input("Album title: ");
+        if album_name == 'q':
+            break;
+        the_album = make_album(artist_name, album_name);
+        print(the_album);
+
+practice8_8();
