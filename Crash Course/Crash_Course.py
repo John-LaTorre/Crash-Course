@@ -794,4 +794,38 @@ def practice8_8():
         the_album = make_album(artist_name, album_name);
         print(the_album);
 
-practice8_8();
+# practice8_c
+def print_models(unprinted_designs, complete_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop();
+        print("Printing model: " + current_design);
+        completed_models.append(current_design);
+
+def show_completed_models(completed_models):
+    print("\nThe following models have been printed: ");
+    for completed_model in completed_models:
+        print(completed_model);
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron'];
+completed_models = [];
+#print_models(unprinted_designs[:], completed_models);
+#show_completed_models(completed_models);
+#print(unprinted_designs);
+
+#practice8_9
+magicians = ['frank', 'mysterio', 'balthazar'];
+def show_magicians(magi):
+    for mage in magi:
+        print(mage.title());
+#show_magicians(magicians);
+
+#practice8_10&11
+def make_great(magicians):
+    new = [];
+    while magicians:
+        new_magician = magicians.pop();
+        new_magician += ' the Great';
+        new.append(new_magician);
+    return new;
+great_magicians = make_great(magicians[:]);
+show_magicians(great_magicians);
+show_magicians(magicians);
