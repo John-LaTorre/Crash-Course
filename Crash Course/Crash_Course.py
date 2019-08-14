@@ -827,5 +827,26 @@ def make_great(magicians):
         new.append(new_magician);
     return new;
 great_magicians = make_great(magicians[:]);
-show_magicians(great_magicians);
-show_magicians(magicians);
+#show_magicians(great_magicians);
+#show_magicians(magicians);
+
+# practice8_12
+def make_sandwich(*ingredients):
+    print("\nMaking a sandwhich with the following ingredients: ");
+    for ingredient in ingredients:
+        print("- " + ingredient);
+#make_sandwich('peanut butter', 'grape jelly');
+#make_sandwich('bacon', 'lettuce', 'tomato');
+#make_sandwich('steak', 'cheese', 'onions', 'peppers');
+
+#practice8_13
+def build_profile(first, last, **user_info):
+    profile = {};
+    profile['first_name'] = first;
+    profile['last_name'] = last;
+    for key, value in user_info.items():
+        profile[key] = value;
+    return profile;
+
+me = build_profile('John', 'LaTorre', location = 'North Carolina', marital_status = 'Single', employed = False);
+#print(me);
