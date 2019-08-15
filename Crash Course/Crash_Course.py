@@ -850,3 +850,13 @@ def build_profile(first, last, **user_info):
 
 me = build_profile('John', 'LaTorre', location = 'North Carolina', marital_status = 'Single', employed = False);
 #print(me);
+#practice8_14
+def make_car(maker, model, **info):
+    car = {};
+    car['manufacturer'] = maker;
+    car['model'] = model;
+    for key, value in info.items():
+        car[key] = value;
+    return car;
+my_car = make_car('mazda', '3', color = 'red', doors = 4);
+#print(my_car);
