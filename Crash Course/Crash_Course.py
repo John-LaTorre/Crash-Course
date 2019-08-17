@@ -795,18 +795,18 @@ def practice8_8():
         print(the_album);
 
 # practice8_c
-def print_models(unprinted_designs, complete_models):
-    while unprinted_designs:
-        current_design = unprinted_designs.pop();
-        print("Printing model: " + current_design);
-        completed_models.append(current_design);
+#def print_models(unprinted_designs, complete_models):
+#    while unprinted_designs:
+#        current_design = unprinted_designs.pop();
+#        print("Printing model: " + current_design);
+#        completed_models.append(current_design);
 
-def show_completed_models(completed_models):
-    print("\nThe following models have been printed: ");
-    for completed_model in completed_models:
-        print(completed_model);
-unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron'];
-completed_models = [];
+#def show_completed_models(completed_models):
+#    print("\nThe following models have been printed: ");
+#    for completed_model in completed_models:
+#        print(completed_model);
+#unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron'];
+#completed_models = [];
 #print_models(unprinted_designs[:], completed_models);
 #show_completed_models(completed_models);
 #print(unprinted_designs);
@@ -848,7 +848,7 @@ def build_profile(first, last, **user_info):
         profile[key] = value;
     return profile;
 
-me = build_profile('John', 'LaTorre', location = 'North Carolina', marital_status = 'Single', employed = False);
+me = build_profile('John', 'LaTorre', location='North Carolina', marital_status='Single', employed=False);
 #print(me);
 #practice8_14
 def make_car(maker, model, **info):
@@ -860,3 +860,32 @@ def make_car(maker, model, **info):
     return car;
 my_car = make_car('mazda', '3', color = 'red', doors = 4);
 #print(my_car);
+#practice 8_d
+from pizza import make_pizza as mp
+#mp(16, 'pepperoni');
+#mp(12, 'mushrooms', 'green peppers', 'extra cheese');
+
+#practice8_15
+import printing_functions as pf
+#unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron'];
+#completed_models = [];
+#pf.print_models(unprinted_designs[:], completed_models);
+#pf.show_completed_models(completed_models);
+#print(unprinted_designs);
+
+#practice8_16
+import practice_8_16
+#print("import module name")
+#practice_8_16.purpose();
+#from practice_8_16 import purpose
+#print("from module name import function")
+#purpose();
+from practice_8_16 import purpose as p
+#print("from module name import function as fn")
+#p();
+import practice_8_16 as p816
+#print("import module name as mn")
+#p816.purpose();
+from practice_8_16 import *
+#print("from module name import *")
+#purpose();
