@@ -889,3 +889,77 @@ import practice_8_16 as p816
 from practice_8_16 import *
 #print("from module name import *")
 #purpose();
+
+#practice9_a
+class Dog():
+    def __init__(self, name, age):
+        self.name = name;
+        self.age = age;
+    def sit(self):
+        print(self.name.title() + " is now sitting.");
+    def roll_over(self):
+        print(self.name.title() + " rolled over!");
+
+my_dog = Dog('annabelle', 12);
+your_dog = Dog('fido', 5);
+#print("My dog's name is " + my_dog.name.title() + ".");
+#print("My dog is " + str(my_dog.age) + ".");
+#print("Your dog's name is " + your_dog.name.title() + ".");
+#print("Your dog is " + str(your_dog.age) + ".");
+#my_dog.sit();
+#my_dog.roll_over();
+#your_dog.sit();
+#your_dog.roll_over();
+
+#practice9_1
+class Restaurant():
+    def __init__(self, name, cuisine):
+        self.name = name;
+        self.cuisine = cuisine;
+    def describe_restaurant(self):
+        print(self.name.title() + " is a " + self.cuisine.title() + " restaurant.");
+    def open_restaurant(self):
+        print(self.name.title() + " is now open for business!");
+
+restaurant1 = Restaurant("cuchinos", 'italian');
+#print(restaurant1.name.title());
+#print(restaurant1.cuisine.title());
+#restaurant1.describe_restaurant();
+#restaurant1.open_restaurant();
+
+#practice9_2
+french = Restaurant("chez pierre", 'french');
+chinese = Restaurant("double happiness", 'chinese');
+fast_food = Restaurant("bojangles", 'chicken');
+#french.describe_restaurant();
+#chinese.describe_restaurant();
+#fast_food.describe_restaurant();
+
+#practice9_3
+class User():
+    def __init__(self, first_name, last_name, age, hobby):
+        self.first_name = first_name;
+        self.last_name = last_name;
+        self.age = age;
+        self.hobby = hobby;
+
+    def user_description(self):
+        print("User: " + self.first_name.title() + " " + self.last_name.title());
+        print("Age: " + str(self.age));
+        print("Hobby: " + self.hobby.title());
+
+    def greet_user(self):
+        print("Hello " + self.first_name.title() + "!");
+        print("Have you had time for " + self.hobby + " lately?\n");
+
+john = User('john', 'latorre', 36, 'video games');
+john.user_description();
+john.greet_user();
+
+shannon = User('shannon', 'schaible', 25, 'politics');
+shannon.user_description();
+shannon.greet_user();
+
+leslie = User('leslie', 'cohen', 56, 'painting');
+leslie.user_description();
+leslie.greet_user();
