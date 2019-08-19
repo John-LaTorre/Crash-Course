@@ -916,10 +916,18 @@ class Restaurant():
     def __init__(self, name, cuisine):
         self.name = name;
         self.cuisine = cuisine;
+        self.number_served = 0;
     def describe_restaurant(self):
         print(self.name.title() + " is a " + self.cuisine.title() + " restaurant.");
     def open_restaurant(self):
         print(self.name.title() + " is now open for business!");
+    def served(self):
+        print(self.name.title() + " has served " + str(self.number_served) + " customers.");
+    def set_number_served(self, customers):
+        self.number_served = customers;
+    def increment_number_served(self, customers):
+        self.number_served += customers;
+
 
 restaurant1 = Restaurant("cuchinos", 'italian');
 #print(restaurant1.name.title());
@@ -942,6 +950,7 @@ class User():
         self.last_name = last_name;
         self.age = age;
         self.hobby = hobby;
+        self.login_attempts = 0;
 
     def user_description(self):
         print("User: " + self.first_name.title() + " " + self.last_name.title());
@@ -952,14 +961,80 @@ class User():
         print("Hello " + self.first_name.title() + "!");
         print("Have you had time for " + self.hobby + " lately?\n");
 
+    def increment_login_attempts(self):
+        self.login_attempts += 1;
+        
+    def reset_login_attempts(self):
+        self.login_attempts = 0;
+
 john = User('john', 'latorre', 36, 'video games');
-john.user_description();
-john.greet_user();
+#john.user_description();
+#john.greet_user();
 
 shannon = User('shannon', 'schaible', 25, 'politics');
-shannon.user_description();
-shannon.greet_user();
+#shannon.user_description();
+#shannon.greet_user();
 
 leslie = User('leslie', 'cohen', 56, 'painting');
-leslie.user_description();
-leslie.greet_user();
+#leslie.user_description();
+#leslie.greet_user();
+
+#practice9_b
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make;
+        self.model = model;
+        self.year = year;
+        self.odometer_reading = 0;
+
+    def get_descriptive_name(self):
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model;
+        return long_name.title();
+
+    def read_odometer(self):
+        print("This car has " + str(self.odometer_reading) + " miles on it.");
+
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage;
+        else:
+            print("You can't roll back an odometer!");
+
+    def increment_odometer(self, miles):
+        if miles >= 0:
+            self.odometer_reading += miles;
+        else:
+            print("You can't roll back an odometer!");
+
+my_new_car = Car('mazda', '3', '2015');
+#print(my_new_car.get_descriptive_name());
+#my_new_car.update_odometer(23);
+#my_new_car.read_odometer();
+#my_new_car.update_odometer(15);
+
+my_used_car = Car('subaru', 'outback', 2013);
+#print(my_used_car.get_descriptive_name());
+#my_used_car.update_odometer(23500);
+#my_used_car.read_odometer();
+#my_used_car.increment_odometer(100);
+#my_used_car.read_odometer();
+
+#practice9_4 (see 9_1)
+burgers = Restaurant('mcdonalds', 'hamburger');
+#burgers.served();
+#burgers.number_served = 500;
+#burgers.served();
+#burgers.set_number_served(1000);
+#burgers.served();
+#burgers.increment_number_served(2500);
+#burgers.served();
+
+#practice9_5 (see 9_3)
+hacker = User('hacker', 'mchackerton', 14, 'haxor');
+login = 0;
+while login < 5:
+    hacker.increment_login_attempts();
+    login += 1;
+print(str(hacker.login_attempts));
+hacker.reset_login_attempts();
+print(str(hacker.login_attempts));
