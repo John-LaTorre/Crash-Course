@@ -1031,10 +1031,27 @@ burgers = Restaurant('mcdonalds', 'hamburger');
 
 #practice9_5 (see 9_3)
 hacker = User('hacker', 'mchackerton', 14, 'haxor');
-login = 0;
-while login < 5:
-    hacker.increment_login_attempts();
-    login += 1;
-print(str(hacker.login_attempts));
-hacker.reset_login_attempts();
-print(str(hacker.login_attempts));
+#login = 0;
+#while login < 5:
+#    hacker.increment_login_attempts();
+#    login += 1;
+#print(str(hacker.login_attempts));
+#hacker.reset_login_attempts();
+#print(str(hacker.login_attempts));
+
+#practice9_c
+class Battery():
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size;
+     
+    def describe_battery(self):
+        print("This car has a " + str(self.battery_size) + "-kWh battery.");
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year);
+        self.battery = Battery();
+
+my_tesla = ElectricCar('tesla', 'model s', 2016);
+print(my_tesla.get_descriptive_name());
+my_tesla.battery.describe_battery();
