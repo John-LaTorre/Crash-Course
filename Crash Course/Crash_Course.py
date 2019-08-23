@@ -1047,11 +1047,35 @@ class Battery():
     def describe_battery(self):
         print("This car has a " + str(self.battery_size) + "-kWh battery.");
 
+    def get_range(self):
+        if self.battery_size == 70:
+            range = 240;
+        elif self.battery_size == 85:
+            range = 270;
+        message = "This car can go approximately " + str(range);
+        message += " miles on a full charge.";
+        print(message);
+
 class ElectricCar(Car):
     def __init__(self, make, model, year):
         super().__init__(make, model, year);
         self.battery = Battery();
 
 my_tesla = ElectricCar('tesla', 'model s', 2016);
-print(my_tesla.get_descriptive_name());
-my_tesla.battery.describe_battery();
+#print(my_tesla.get_descriptive_name());
+#my_tesla.battery.describe_battery();
+#my_tesla.battery.get_range();
+
+#practice9_6
+class IceCreamStand(Restaurant):
+    def __init__(self, name, *flavors, cuisine= 'ice cream'):
+        super().__init__(name, cuisine);
+        self.flavors = flavors;
+    def give_flavors(self):
+        print("Available Flavors:");
+        for flavor in self.flavors:
+            print("- " + flavor);
+
+simple_shop = IceCreamStand("simple shop", 'chocolate', 'vanilla', 'strawberry');
+simple_shop.describe_restaurant();
+simple_shop.give_flavors();
