@@ -1056,6 +1056,10 @@ class Battery():
         message += " miles on a full charge.";
         print(message);
 
+    def upgrade_battery(self):
+        if self.battery_size < 85:
+            self.battery_size = 85;
+
 class ElectricCar(Car):
     def __init__(self, make, model, year):
         super().__init__(make, model, year);
@@ -1076,6 +1080,32 @@ class IceCreamStand(Restaurant):
         for flavor in self.flavors:
             print("- " + flavor);
 
-simple_shop = IceCreamStand("simple shop", 'chocolate', 'vanilla', 'strawberry');
-simple_shop.describe_restaurant();
-simple_shop.give_flavors();
+#simple_shop = IceCreamStand("simple shop", 'chocolate', 'vanilla', 'strawberry');
+#simple_shop.describe_restaurant();
+#simple_shop.give_flavors();
+
+#practice9_8
+
+class Privileges():
+    def __init__(self, *privileges):
+        self.privileges = privileges;
+    def show_privileges(self):
+        for privilege in self.privileges:
+            print("- " + privilege);
+
+#practice9_7
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age, hobby):
+        super().__init__(first_name, last_name, age, hobby);
+        self.privileges = Privileges("can add post", "can delete post", "can ban user");
+        
+admin1 = Admin("john", "latorre", 36, "video games");
+#admin1.privileges.show_privileges();
+
+#practice9_9
+
+my_2nd_car = ElectricCar("nissan", "leaf", 2006);
+my_2nd_car.battery.get_range();
+my_2nd_car.battery.upgrade_battery();
+my_2nd_car.battery.get_range();
