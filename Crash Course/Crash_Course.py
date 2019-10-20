@@ -1105,7 +1105,55 @@ admin1 = Admin("john", "latorre", 36, "video games");
 
 #practice9_9
 
-my_2nd_car = ElectricCar("nissan", "leaf", 2006);
-my_2nd_car.battery.get_range();
-my_2nd_car.battery.upgrade_battery();
-my_2nd_car.battery.get_range();
+#my_2nd_car = ElectricCar("nissan", "leaf", 2006);
+#my_2nd_car.battery.get_range();
+#my_2nd_car.battery.upgrade_battery();
+#my_2nd_car.battery.get_range();
+
+from collections import OrderedDict;
+
+favorite_languages = OrderedDict();
+
+favorite_languages['jen'] = 'python';
+favorite_languages['sarah'] = 'c';
+favorite_languages['edward'] = 'ruby';
+favorite_languages['phil'] = 'python';
+
+#for name, language in favorite_languages.items():
+#    print(name.title() + "'s favorite language is " + language.title() + ".");
+
+#practice9_13
+python_glossery = OrderedDict();
+python_glossery['list'] = "Basically the python version of an array.";
+python_glossery['dictionary'] = "Like an array but functions similar to a hash table.";
+python_glossery['elif'] = "Stands for else-if, otherwise identical to Java.";
+python_glossery['loop'] = "Instead of using an increment variable, Python skips that and says it in plain English -> for x in y.";
+python_glossery['slice'] = "Python lets you take pieces of an array/list and work with them separately with this command.";
+
+#for name, language in python_glossery.items():
+#    print(name.title() + " is " + language.title() + ".");
+
+#practice9_14
+from random import randint
+class Die():
+    def __init__(self, sides):
+        self.sides = sides;
+    def roll_die(self):
+        max = self.sides;
+        result = randint(1, max);
+        return(result);
+
+#d6 = Die(6);
+#rolls = 1;
+#while rolls <= 6:
+#    attributes = [];
+#    for x in range(0, 4):
+#        result = d6.roll_die();
+#        attributes.append(result);
+#    attributes.remove(min(attributes));
+#    total = 0;
+#    for roll in attributes:
+#        total += roll;
+#    print(total);
+#    rolls += 1;
+
